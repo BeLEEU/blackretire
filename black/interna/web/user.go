@@ -24,11 +24,11 @@ func NewUserHandler() *UserHandler {
 
 func (u *UserHandler) RegisterRoutes(server *gin.Engine) {
 
-	server.GET("/user/login", func(ctx *gin.Context) {
+	server.GET("/users/login", func(ctx *gin.Context) {
 		ctx.String(http.StatusOK, "login success")
 	})
 
-	server.POST("/user/signup", func(ctx *gin.Context) {
+	server.POST("/users/signup", func(ctx *gin.Context) {
 
 		type SinupStruct struct {
 			Email           string `json:"email"`
@@ -71,11 +71,11 @@ func (u *UserHandler) RegisterRoutes(server *gin.Engine) {
 		ctx.String(http.StatusOK, "signup success")
 	})
 
-	server.GET("/user/profile", func(ctx *gin.Context) {
+	server.GET("/users/profile", func(ctx *gin.Context) {
 		ctx.String(http.StatusOK, "profile success")
 	})
 
-	server.POST("/user/edit", func(ctx *gin.Context) {
+	server.POST("/users/edit", func(ctx *gin.Context) {
 		ctx.String(http.StatusOK, "edit success")
 	})
 }

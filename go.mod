@@ -2,7 +2,12 @@ module github.com/BeLEEU/blackretire
 
 go 1.20
 
-require github.com/gin-gonic/gin v1.10.0
+require (
+	github.com/gin-contrib/cors v1.7.2
+	github.com/gin-gonic/gin v1.10.0
+)
+
+require github.com/kr/text v0.2.0 // indirect
 
 require (
 	github.com/bytedance/sonic v1.11.6 // indirect
